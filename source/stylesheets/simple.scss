@@ -1,0 +1,191 @@
+@import 'compass/css3';
+@import 'variables';
+// @import 'footer';
+
+#header.brazen {
+  position: relative;
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  margin: 1em 0 0 0;
+  transition: bottom 0.6s ease-in-out;
+
+
+  .icon-hex-logo {
+    /*color: #EEEEEE;*/
+    display: block;
+    font-family: roboto;
+    font-size: 60px;
+    font-weight: 100;
+    /*margin: 0.5em auto;*/
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    width: 7em;
+  }
+
+  .icon-hex-logo:before {
+    font-family: 'Hex-icons';
+    font-size: 200px;
+    margin: 0;
+    text-shadow: 0 1.5px 0 rgba(50,50,50,0.2), 0 0 0 #86ecf0;
+    transition: all 0.6s;
+  }
+
+  .icon-hex-logo:hover:before {
+    text-shadow: 0 1.5px 0 rgba(50,50,50,0), 0 0 0.23em #86ecf0;
+  }
+
+  .icon-hex-logo span {
+    display: block;
+    font-size: inherit;
+    padding-top: 0.1em;
+    white-space: nowrap;
+    text-shadow: 0 1.5px 0 rgba(50,50,50,0.2), 0 0 0 #86ecf0;
+    transition: all 0.6s;
+  }
+
+  .icon-hex-logo:hover span {
+    text-shadow: 0 1.5px 0 rgba(50,50,50,0), 0 0 0.23em #86ecf0;
+  }
+}
+
+
+@media (max-height: 500px), (max-width: 500px) {
+  #header {
+    .icon-hex-logo {
+      width: 6em;
+    }
+
+    .icon-hex-logo:before {
+      font-size: 140px;
+    }
+
+    .icon-hex-logo span {
+      // font-size: 40px;
+      font-size: 43px;
+    }
+  }
+}
+
+
+.project-list {
+  /*color: #EEEEEE;*/
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.6;
+  list-style: none outside none;
+  margin: 0 auto;
+  /*padding-left: 177px;*/
+  /*padding-top: 2em;*/
+  padding: 2em 0 3em 165px;
+  padding: 2em 0 3em 110px;
+  // padding: 2em 0 3em 155px;
+  // width: 320px;
+  width: 280px;
+  overflow: hidden;
+
+
+  @media (max-height: 500px), (max-width: 500px) {
+    padding: 2em 0 3em 73px;
+    width: 200px;
+  }
+}
+
+
+
+
+.project-list li {
+  padding: 0;
+  margin: 0;
+}
+
+.project {
+  display: inline-block;
+  cursor: pointer;
+  /*padding-left: 0;*/
+  padding: 0 0.5em 0 0.5em;
+  text-shadow: 0 1.0px 0 rgba(50,50,50,0.2), 0 0 0 #86ecf0;
+  margin-right: 100%;
+  white-space: nowrap;
+  position: relative; /*prob remove this*/
+/*        transition: all 0.4s ease-in-out 0.2s;*/
+  transition: all 1.2s ease-in-out 0s;
+
+  transition: all 0.6s ease-in-out 0s;
+  // -moz-osx-font-smoothing: greyscale;
+}
+
+ .project,
+ .project:hover,
+ .project:focus {
+  text-decoration: none;
+  color: inherit;
+  outline-color: $black;
+}
+
+.project:hover,
+.project:focus {
+  color: $true-black;
+  // padding: 0 0.5em 0 1em;
+  text-shadow: 0 1.0px 0 rgba(50,50,50,0), 0 0 0.23em #86ecf0;
+  transition: all 0.4s ease-in-out 0.1s;
+
+  // padding: 0 0.5em 0 0.75em;
+  padding: 0 1.25em 0 0em;
+  // padding: 0 1.25em 0 0em;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+// remove these styles once all projects have gh-pages
+.project.icon-github {
+  font-family: roboto;
+  font-weight: 300;
+}
+
+.project.icon-github:before {
+  font-family: 'Hex-icons';
+  font-size: 80%;
+  left: 100%;
+  line-height: 1.5;
+  position: absolute;
+  padding-left: 0.25em;
+  opacity: 0.25;
+}
+
+.desc {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  font-size: 20px;
+  left: 100%;
+  line-height: 1.4;
+  margin-top: 2em;
+  padding: 0.5em;
+  position: absolute;
+  top: 0;
+  white-space: normal;
+  width: 15em;
+}
+
+
+
+// experimental hover
+
+// .project:hover:before {
+//   margin-right: 0;
+//   opacity: 1;
+//   width: 3px;
+// }
+// .project:before {
+//   background: none repeat scroll 0 0 #000000;
+//   bottom: 18%;
+//   content: "";
+//   display: block;
+//   margin-right: 4px;
+//   opacity: 0;
+//   position: absolute;
+//   right: 100%;
+//   top: 18%;
+//   transition: all 0.4s ease 0.1s;
+//   width: 9px;
+// }

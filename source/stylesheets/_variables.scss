@@ -1,0 +1,97 @@
+
+// Color Palette
+
+$true-white: #fff;
+$white: #eee;
+$almost-white: #ddd;/* TODO: set color */
+$light-grey: #aaa;/* TODO: set color */
+$grey: #b8b8b8;/* TODO: set color */
+$dark-grey: #8c8c8c;/* TODO: set color */
+$almost-black: #262626;/* TODO: set color */
+$black: #222;
+$true-black: #000;
+
+// Hover Colors
+$white-hover: $true-white;
+$almost-white-hover: $white;
+
+$black-hover: $true-black;
+
+
+$blue: #00f;/* TODO: set color */
+$green: #0f0;/* TODO: set color */
+
+// experimental var naming for gradient steps
+$g1_----: #fff;
+$g1-_---: #fff;
+$g1--_--: #fff;
+$g1---_-: #fff;
+$g1----_: #fff;
+
+// alt experimental var naming for gradient steps
+$g2-____: #fff;
+$g2_-___: #fff;
+$g2__-__: #fff;
+$g2___-_: #fff;
+$g2____-: #fff;
+
+
+// Alpha Colors
+
+$text-shadow-color: rgba(0,0,0,0.3);
+$text-glow-color: rgba(255,255,255,0.4); /* TODO: set color */
+$inset-shadow-color: rgba(0,0,0,0.4);
+$disabled-opacity: 0.4;
+
+// Type Sizes
+
+// $mega: 42px;
+// $xlarge: 32px;
+// $large: 28px;
+// $normal: 22px;
+// $small: 17px;
+// $xsmall: 15px;
+// $tiny: 13px;
+
+// Type Colors
+
+// $text-color: $white;
+// $heading-color: $text-color;
+// $code-color: $text-color;
+// $quote-color: $text-color;
+// $link-color: $text-color;
+// $link-hover-color: $white-hover;
+
+// Type offsets to account for line height
+
+$mega-top-offset: -6px;
+$xlarge-top-offset: -5px;
+$large-top-offset: -4px;
+$normal-top-offset: -3px;
+$small-top-offset: -2px;
+$xsmall-top-offset: -3px;
+$tiny-top-offset: -2px;
+
+$mega-bottom-offset: 0;
+$xlarge-bottom-offset: 0;
+$large-bottom-offset: 0;
+$normal-bottom-offset: 0;
+$small-bottom-offset: 0;
+$xsmall-bottom-offset: 0;
+$tiny-bottom-offset: 0;
+
+// Type Faces
+
+$default-typeface: Helvetica, Arial, sans-serif;
+// $xsans-extra-light: 'XfinitySansExtraLight';
+// $xsans-light: 'XfinitySansLight';
+// $xsans-medium: 'XfinitySansMedium';
+$hex-icons: 'Hex-icons';
+
+// Relative Core Sizes
+// p = padding
+$p:  6px;/* TODO: set color */
+
+
+$page-min-width: 300px;
+$page-min-height: 300px;/* TODO: set size */

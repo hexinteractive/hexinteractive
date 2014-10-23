@@ -1,0 +1,20 @@
+---
+title: About Hex Interactive
+description: about
+directory_index: true
+---
+
+<% content_for :head do %>
+  <%= stylesheet_link_tag "about" %>
+<%end %>
+
+<% content_for :body_main do %>
+  <%= partial(:header, :locals => { :header_classes => '' }) %>
+  <main role="main">
+    <div id="simpleAbout">
+      <h1>Hi, I'm Bryan Yurasits</h1>
+      <p>Futurist. &nbsp;Interaction Designer. &nbsp;Web Developer. </p>
+    </div>
+  </main>
+  <!-- /content -->
+<%end %>

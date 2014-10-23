@@ -1,10 +1,28 @@
 ---
-title: Welcome to Middleman
+title: Hex Interactive
+directory_index: true
 ---
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<% content_for :head do %>
+<%= stylesheet_link_tag "simple" %>
+<%end %>
+
+<% content_for :body_main do %>
+
+<%= partial(:header, :locals => { :header_classes => 'brazen' }) %>
+
+<main role="main">
+  <ul class="project-list">
+    <li><a class="project" target="_blank" href="/projects/caps-toggle/markup.html">CAPS toggle</a></li>
+    <li><a class="project" target="_blank" href="/projects/idle-hands/video.html">Idle Hands</a></li>
+    <li><a class="project" target="_blank" href="/projects/QR-Clock/markup.html">QR Clock</a></li>
+    <li><a class="project" target="_blank" href="/projects/responsive-dates/markup.html">Responsive Dates</a></li>
+    <li><a class="project" target="_blank" href="/projects/disco-ambience/markup.html">Disco Ambience</a></li>
+    <li><a class="project" target="_blank" href="/projects/infinite-array-looping/markup.html">Infinite Array Looping</a></li>
+<%# <li><a class="project" target="_blank" href="#foo">calendar</a></li>
+    <li><a class="project" target="_blank" href="#foo">Hexozoa</a></li>
+    <li><a class="project" target="_blank" href="#foo">Actual Size</a></li>
+%>
+  </ul>
+</main>
+<%end %>

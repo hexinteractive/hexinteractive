@@ -1,0 +1,20 @@
+<% wrap_layout :layout do %>
+
+  <% content_for :head do %>
+    <%= yield_content :head %>
+  <%end %>
+
+
+  <% content_for :body_main do %>
+    <%# partial(:header, :locals => { :header_classes => 'brazen' }) %>
+
+    <main role="main">
+      <%= yield_content :body_main %>
+    </main>
+
+    <%# partial "footer" %>
+  <%end %>
+
+
+
+<%end %>
