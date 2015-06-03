@@ -11,7 +11,9 @@
 // $light_highlight;
 
 
-
+main {
+  margin-bottom: 45px;
+}
 
 
 
@@ -235,6 +237,10 @@ footer .icon-hex-logo:before {
 
 @media (max-width: 390px) {
 
+  main {
+    margin-bottom: 142px;
+  }
+
   footer .icon-hex-logo {
     display: block;
     height: 20px;
@@ -325,6 +331,11 @@ footer .icon-hex-logo:before {
 }
 
 @media (min-height: 900px) {
+
+  main {
+    margin-bottom: 55px;//this is a guess
+  }
+
   footer {
     /*height: 4em;*/
     /*padding-top: 2em;*/

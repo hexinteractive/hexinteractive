@@ -1,3 +1,15 @@
 <header id="header" class="<%= header_classes ||= '' %>">
     <h1 class="icon-hex-logo"><span>Hex Interactive </span> </h1>
+    <% unless header_classes =~ /brazen/ %>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="/resume/">resume</a></li>
+          <li><a href="/about/">about</a></li>
+          <li><a href="/contact/">contact</a></li>
+          <li><a target="_blank" href="/blog/">blog</a></li>
+          <li><a href="/">projects</a></li>
+        </ul>
+      </nav>
+    <% end %>
+
 </header><!-- /header -->

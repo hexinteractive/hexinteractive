@@ -69,15 +69,7 @@ html {
   color: $black;
   background-color: #58C8DC;
   height: 100%;
-}
 
-body {
-    position: relative;
-    padding: 1px 0; /* stops any child element with margin-top/bottom from pushing the edge of BODY away from HTML. any value less than 1px doesnt work in iOS browsers */
-    // min-width: $page-min-width;
-    margin:-1px 0;
-
-// =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
   background-color: #58C8DC;
   background-image: linear-gradient(45deg, rgba(88,150,255,1) 0%,rgba(88,244,188,1) 100%,rgba(88,220,206,1) 100%);
   /* #49bce5 > #46d4d4 */
@@ -90,9 +82,35 @@ body {
   @media (min-height: 500px), (min-width: 500px) {
     background-image: linear-gradient(45deg, #4badf0 0%, #43e1c8 100%);
   }
+  background-attachment: fixed;
 
 }
 
+body {
+    position: relative;
+    padding: 1px 0; /* stops any child element with margin-top/bottom from pushing the edge of BODY away from HTML. any value less than 1px doesnt work in iOS browsers */
+    // min-width: $page-min-width;
+    margin:-1px 0;
+
+// =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+  // background-color: #58C8DC;
+  // background-image: linear-gradient(45deg, rgba(88,150,255,1) 0%,rgba(88,244,188,1) 100%,rgba(88,220,206,1) 100%);
+  // /* #49bce5 > #46d4d4 */
+  // background-image: linear-gradient(45deg, #49bce5 0%, #46d4d4 100%);
+
+  // @media (min-height: 400px), (min-width: 400px) {
+  //     background-image: linear-gradient(45deg, #4bb2ed 0%, #44decc 100%);
+  // }
+
+  // @media (min-height: 500px), (min-width: 500px) {
+  //   background-image: linear-gradient(45deg, #4badf0 0%, #43e1c8 100%);
+  // }
+
+}
+
+main {
+  padding: 1px 0;
+}
 
 h1,
 h2,
@@ -112,55 +130,55 @@ h6 {
 }
 
 
-#header {
-  position: relative;
-  top: 0;
-  bottom: auto;
-  // width: 100%;
-  width: 96%;//same as the footer. I should abstract this value...
-  margin: 0 auto;
-  transition: bottom 0.6s ease-in-out;
+// #header {
+//   position: relative;
+//   top: 0;
+//   bottom: auto;
+//   // width: 100%;
+//   width: 96%;//same as the footer. I should abstract this value...
+//   margin: 0 auto;
+//   transition: bottom 0.6s ease-in-out;
 
 
-  .icon-hex-logo {
-    display: block;
-    font-family: roboto;
-    font-size: 50px;
-    font-weight: 100;
-    // margin: 0.25em;
-    margin: 0.25em 0;
-    text-align: center;
-    text-decoration: none;
-    width: 8em;
-  }
+//   .icon-hex-logo {
+//     display: block;
+//     font-family: roboto;
+//     font-size: 50px;
+//     font-weight: 100;
+//     // margin: 0.25em;
+//     margin: 0.25em 0;
+//     text-align: center;
+//     text-decoration: none;
+//     width: 8em;
+//   }
 
-  .icon-hex-logo:before {
-    display: inline-block;
-    font-family: 'Hex-icons';
-    font-size: 70px;
-    margin: -9px 0.18em 0 0;
-    text-shadow: 0 1.5px 0 rgba(50, 50, 50, 0.2), 0 0 0 #86ECF0;
-    transition: all 0.6s ease 0s;
-    vertical-align: middle;
-  }
+//   .icon-hex-logo:before {
+//     display: inline-block;
+//     font-family: 'Hex-icons';
+//     font-size: 70px;
+//     margin: -9px 0.18em 0 0;
+//     text-shadow: 0 1.5px 0 rgba(50, 50, 50, 0.2), 0 0 0 #86ECF0;
+//     transition: all 0.6s ease 0s;
+//     vertical-align: middle;
+//   }
 
-  .icon-hex-logo:hover:before {
-    text-shadow: 0 1.5px 0 rgba(50,50,50,0), 0 0 0.23em #86ecf0;
-  }
+//   .icon-hex-logo:hover:before {
+//     text-shadow: 0 1.5px 0 rgba(50,50,50,0), 0 0 0.23em #86ecf0;
+//   }
 
-  .icon-hex-logo span {
-    display: inline-block;
-    font-size: inherit;
-    padding-top: 0.1em;
-    text-shadow: 0 1.5px 0 rgba(50, 50, 50, 0.2), 0 0 0 #86ECF0;
-    transition: all 0.6s ease 0s;
-    white-space: nowrap;
-  }
+//   .icon-hex-logo span {
+//     display: inline-block;
+//     font-size: inherit;
+//     padding-top: 0.1em;
+//     text-shadow: 0 1.5px 0 rgba(50, 50, 50, 0.2), 0 0 0 #86ECF0;
+//     transition: all 0.6s ease 0s;
+//     white-space: nowrap;
+//   }
 
-  .icon-hex-logo:hover span {
-    text-shadow: 0 1.5px 0 rgba(50,50,50,0), 0 0 0.23em #86ecf0;
-  }
-}
+//   .icon-hex-logo:hover span {
+//     text-shadow: 0 1.5px 0 rgba(50,50,50,0), 0 0 0.23em #86ecf0;
+//   }
+// }
 
 #flux {
   border: 2px dashed rgba(20, 20, 20, 0.2);
@@ -180,6 +198,7 @@ h6 {
 
 // @import 'compass/css3';
 // @import 'variables';
+@import 'header';
 @import 'footer';
 
 

@@ -13,6 +13,9 @@ directory_index: true
       margin: 5em auto;
       padding: 0.5em 0.75em;
       width: 400px;
+      border: 1px solid transparent;
+      border-color: rgba(255, 255, 255, 0.3) transparent rgba(100, 150, 150, 0.4);
+      /*box-shadow: 0px 6px 8px 0px rgba(50,50,50,0.1);*/
     }
 
     #tweetLink {
@@ -31,7 +34,7 @@ directory_index: true
 <%= partial(:header, :locals => { :header_classes => '' }) %>
   <main role="main">
     <p id="simpleContact">
-      <span>Lets keep this casual for now, just tweet me </span> <a id="tweetLink" href="https://twitter.com/share?text=@hexinteractive how's it going?" target="_blank">@hexinteractive</a>
+      <span>Let's keep this casual for now, just tweet me </span> <a id="tweetLink" href="https://twitter.com/share?text=@hexinteractive how's it going?" target="_blank">@hexinteractive</a>
     </p>
   </main>
   <!-- /content -->

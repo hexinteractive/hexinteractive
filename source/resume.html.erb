@@ -1,0 +1,143 @@
+---
+title: Resume of Bryan Yurasits
+directory_index: true
+layout: layout
+---
+
+<% content_for :head do %>
+<%= stylesheet_link_tag "simple" %>
+<%= stylesheet_link_tag "resume" %>
+<%end %>
+
+<% content_for :body_main do %>
+
+<%= partial(:header, :locals => { :header_classes => '' }) %>
+
+<main role="main" id="resume">
+    <section id="contact" class="vcard">
+        <h1 class="fn">Bryan Yurasits</h1>
+        <del time="2015-08"><address class="adr"><span class="locality">Levittown</span>, <abbr class="region" title="Pennsylvania">PA</abbr></address></del>
+        <ins time="2015-08"><address class="adr"><span class="locality">Alpharetta</span>, <abbr class="region" title="Georgia">GA</abbr></address></ins>
+        <div class="tel">610.580.4120</div>
+        <div class="email">bryan<span>&#64;</span>hexinteractive<span>&#46;</span>net</div>
+    </section>
+    <section id="skills">
+      <h2 class="heading">Skills</h2>
+      <h3 class="skillType">Concepts: </h3>
+      <ul class="skills">
+        <li class="skill">interaction design</li>
+        <li class="skill">user interface design</li>
+        <li class="skill">user-centered design</li>
+        <li class="skill">icon design</li>
+        <li class="skill">prototyping</li>
+        <li class="skill">Object-oriented Programming</li>
+        <li class="skill">prototypical inheritance</li>
+        <li class="skill">rendering optimization</li>
+        <li class="skill">responsive design</li>
+        <li class="skill">progressive enhancement</li>
+        <li class="skill">web standards</li>
+        <li class="skill">Agile / scrum / kanban</li>
+</ul>
+<h3 class="skillType">Technology: </h3>
+<ul class="skills">
+        <li class="skill">JavaScript</li>
+        <li class="skill">jQuery / jQuery Mobile</li> <%# http://jquery.com/ %>
+        <li class="skill"><abbr title="Cascading Style Sheets version 2">CSS2</abbr> / <abbr title="Cascading Style Sheets version 3">CSS3</abbr></li>
+        <li class="skill"><abbr title="Syntactically Awesome Style Sheets">SCSS</abbr></li>
+        <li class="skill">Compass</li>
+        <li class="skill"><abbr title="HyperText Markup Language version 4">HTML4</abbr> / <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> / <abbr title="HyperText Markup Language version 5">HTML5</abbr></li>
+        <li class="skill"><abbr title="Yahoo User Interface">YUI</abbr></li>
+        <li class="skill">RequireJS</li> <%# http://requirejs.org/ %>
+        <li class="skill">Underscore</li> <%# http://underscorejs.org/ %>
+        <li class="skill"><abbr title="regular expressions">regEx</abbr></li>
+        <li class="skill">Ruby on Rails</li>
+        <li class="skill"><abbr title="A recursive abbreviation for &quot;PHP Hypertext Preprocessor&quot;">PHP</abbr></li>
+        <li class="skill">Freemarker</li>
+</ul>
+<h3 class="skillType">Software: </h3>
+<ul class="skills">
+        <li class="skill">Git</li>
+        <li class="skill"><abbr title="Subversion">SVN</abbr></li>
+        <li class="skill">Photoshop</li>
+        <li class="skill">Illustrator</li>
+        <li class="skill">Splunk</li>
+        <li class="skill">TextMate</li>
+        <li class="skill">Sublime Text</li>
+      </ul>
+    </section>
+    <section id="experience">
+      <h2 class="heading">Professional Experience</h2>
+      <ol class="experiences">
+        <li class="exp">
+          <h3 class="title">Web Developer/Software Engineer</h3>
+          <h4 class="org">Comcast Interactive Media</h4>
+          <address>Philadelphia, <abbr title="Pennsylvania">PA</abbr></address>
+          <span class="duration"><time><abbr title="July">Jul</abbr> 2008</time> - <time>Present</time></span>
+          <ul class="hilights">
+            <li class="hilight">Responsible for delivering high-quality features on <a target="_blank" rel="external, sidebar" href="http://my.xfinity.com">my.xfinity.com</a> for 125 Million unique monthly visitors</li>
+            <li class="hilight">design and implement all missing interactions between design comps</li>
+            <li class="hilight">Build technically complex features while balancing rendering performance, responsiveness, accessibility, business objectives, design specs, and technical limitations </li>
+            <li class="hilight">Create prototypes (look/feel, role, implementation) to aid in planning phase of projects as well as interaction design </li>
+            <li class="hilight">Leveraged as an expert to assist other teams with conceptual, usability, and UI performance concerns</li>
+            <li class="hilight">Produce valuable intellectual property (with several patents pending)</li>
+            <li class="hilight">Design and implement interfaces for high-profile initiatives for various properties </li>
+            <li class="hilight">Conduct feasibility reviews of designs with UX and Product teams</li>
+            <li class="hilight">Research emerging web technologies and techniques to drive the evolution of the groups' best practices</li>
+            <li class="hilight">Collaborate with usability team to design innovative solutions based on ethnographic study results</li>
+            <%#<li class="hilight">Lab WeeK, participate, evangelize, volunteer</li>%>
+          </ul>
+        </li>
+        <li class="exp">
+          <h3 class="title"><abbr title="User Interface">UI</abbr> Design &amp; Prototype Developer</h3>
+          <h4 class="org">Merrill Lynch</h4>
+          <address>Hopewell, <abbr title="New Jersey">NJ</abbr></address>
+          <span class="duration"><time><abbr title="February">Feb</abbr> 2008</time> - <time>May 2008</time></span>
+          <span class="summary">Employed by subcontractor, <a target="_blank" rel="external, sidebar" href="http://www.princetoninformation.com/">Princeton Information</a> in support of the Merrill Lynch web app redesign.</span>
+          <ul class="hilights">
+            <li class="hilight">Interpret flat wireframes to produce high-fidelity, cross-browser functional prototypes</li>
+            <li class="hilight">Create a pixel-perfect presentation layer using well-structured, semantic <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> styled with flexible <abbr title="Cascading Style Sheets">CSS</abbr>-based design</li>
+            <li class="hilight">Use expert knowledge of the <acronym title="Document Object Model">DOM</acronym> and object-oriented JavaScript to develop efficient and reusable cross-browser code</li>
+            <li class="hilight">Augment <abbr title="Yahoo User Interface">YUI</abbr> components to create customized interactions to support the desired user experience</li>
+          </ul>
+        </li>
+        <li class="exp">
+          <h3 class="title">Front-end Developer</h3>
+          <h4 class="org">Lockheed Martin <abbr title="Maritime Systems &amp; Sensors">MS2</abbr> eMedia</h4>
+          <address>Moorestown, <abbr title="New Jersey">NJ</abbr></address>
+          <span class="duration"><time><abbr title="February">Feb</abbr> 2005</time> - <time><abbr title="February">Feb</abbr> 2008</time></span>
+          <span class="summary">Employed by subcontractors, <a target="_blank" rel="external, sidebar" href="http://www.gdit.com">Anteon/General Dynamics</a> and <a target="_blank" rel="external, sidebar" href="http://www.splintertek.com">Splintertek</a>, in support of Lockheed Martin Naval contracts.</span>
+
+          <ul class="hilights">
+            <li class="hilight">Developed training applications and interactive courseware</li>
+            <li class="hilight">Utilized object-oriented javascript and other web-technologies to simulate Navy battleship defense systems and equipment</li>
+            <li class="hilight">Created icons, user interfaces and interactions that are intuitive and aesthetic with an emphasis on user-centered design</li>
+            <li class="hilight">Co-wrote a custom JavaScript framework and base classes tailored to device simulation</li>
+            <li class="hilight">Researched and introduced new technologies, techniques, trends and innovations</li>
+            <li class="hilight">Researched, designed and developed prototypes and style guides</li>
+            <li class="hilight">Designed and maintained system architecture of simulated device hardware</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+    <section id="achievements">
+      <h2 class="heading">Achievements & Awards</h2>
+      <ul class="hilights">
+        <li class="hilight">Patents Pending (4)</li>
+        <li class="hilight">Comcast Inventor Recognition Award (2)</li>
+        <li class="hilight">"XFINITY Customer-Minded Award"</li>
+        <li class="hilight">Department of Defense Clearance level: <span>SECRET</span> (unsponsored)</li>
+      </ul>
+    </section>
+    <section id="education">
+      <h2 class="heading">Education</h2>
+      <a target="_blank" rel="external, sidebar" href="http://www.artinstitutes.edu/philadelphia/">The Art Institute of Philadelphia</a>
+      <address>Philadelphia, <abbr title="Pennsylvania">PA</abbr></address>
+      <time>2004</time>
+      <ul class="hilights">
+        <li class="hilight">Bachelor of Science, Multimedia &amp; Web Design</li>
+        <li class="hilight">Graduated with honors</li>
+        <li class="hilight">Awarded "Best of Quarter" for online portfolio</li>
+      </ul>
+    </section>
+</main>
+<%end %>
