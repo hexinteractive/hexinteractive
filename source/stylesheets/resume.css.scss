@@ -53,6 +53,7 @@ ins {
  .heading {
     margin: 1em 0 0.25em 0;
     font-size: $f-xlrg;
+    font-weight: 400;
 
     @media print {
       margin-top: 0.85em;
@@ -345,7 +346,6 @@ ins {
 
   time {
     color: #333;
-    margin: 0 1ex 0 0;
     white-space: nowrap;
     display: inline;
 
@@ -385,7 +385,7 @@ ins {
   }
 
   #resume:before {
-    content: "{ hexinteractive.net/resume }";
+    content: "{ http://hexinteractive.net/resume }";
     position: absolute;
     top: 0;
     right: 0;
