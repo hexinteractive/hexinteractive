@@ -1,0 +1,198 @@
+---
+title: Projects and Posts
+directory_index: true
+layout: layout
+---
+
+<% content_for :head do %>
+<%= stylesheet_link_tag "gallery" %>
+<%end %>
+
+<% content_for :body_main do %>
+
+<%= partial(:header, :locals => { :header_classes => '' }) %>
+
+<main role="main">
+
+    <section>
+      <ul class="grid r">
+        <li class="item a">
+          <article class="post-entry">
+            <img class="post-img" src="http://placekitten.com/g/300/200"/>
+            <h1 class="post-title">Kittens of the Internet</h1>
+            <p class="post-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
+          </article>
+        </li>
+        <li class="item">
+          <article class="post-entry">
+            <img class="post-img" src="/images/tiles/qr-clock-tile.jpg"/>
+            <h1 class="post-title">QR Clock</h1>
+            <p class="post-desc">CSS3, JavaScript, Google Charts API, fun</p>
+          </article>
+        </li>
+        <li class="item">
+          <article class="post-entry">
+            <img class="post-img" src="/images/tiles/caps-toggle-tile.jpg"/>
+            <h1 class="post-title">CAPS toggle</h1>
+            <p class="post-desc">IxD, Javascript</p>
+          </article>
+        </li>
+        <li class="item">
+          <article class="post-entry">
+            <img class="post-img" src="/images/tiles/scrollbar-measurement-tile.jpg"/>
+            <h1 class="post-title">Scrollbar Measuring</h1>
+            <p class="post-desc">DOM, JavaScript</p>
+          </article>
+        </li>
+        <li class="item e">
+          <article class="post-entry">
+            <img class="post-img" src="http://placekitten.com/g/300/170"/>
+
+            <h1 class="post-title">Congruent Disaster</h1>
+            <p class="post-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>
+
+          </article>
+        </li>
+        <li class="item a"></li>
+        <li class="item b">
+          <article class="post-entry">
+            <img class="post-img" src="http://placekitten.com/g/300/280"/>
+
+            <h1 class="post-title">Keep It Under 60</h1>
+            <p class="post-desc">Lorem ipsum dolor sit amet, consectetuer</p>
+
+          </article>
+        </li>
+        <li class="item c"></li>
+        <!-- <li class="item d"></li> -->
+        <li class="item">
+          <article class="post-entry">
+            <!-- <img class="post-img" src="/images/tiles/caps-toggle-tile.jpg"/> -->
+            <h1 class="post-title">Words Without Pictures</h1>
+            <p class="post-desc">Short descriptive text or summary, I'm not sure what it will be.</p>
+          </article>
+        </li>
+        <li class="item e"></li>
+
+        <li class="item a"></li>
+        <li class="item b"></li>
+        <li class="item c"></li>
+        <li class="item d">
+          <article class="post-entry">
+            <img class="post-img" src="http://placekitten.com/g/300/360"/>
+
+            <h1 class="post-title">Once in a Lifetime</h1>
+            <p class="post-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+
+          </article>
+        </li>
+        <li class="item e"></li>
+        <li class="item a"></li>
+        <li class="item b"></li>
+        <li class="item c"></li>
+        <li class="item d"></li>
+        <li class="item e"></li>
+
+        <li class="item a"></li>
+        <li class="item b"></li>
+        <li class="item c"></li>
+        <li class="item d"></li>
+        <li class="item e"></li>
+        <li class="item a"></li>
+        <li class="item b"></li>
+
+        <li class="item filler"></li>
+        <li class="item filler"></li>
+<!--         <li class="item filler"></li>
+        <li class="item filler"></li> -->
+      </ul>
+    </section>
+
+<!-- /content -->
+
+</main>
+<%end %>
+
+<% content_for :body_scripts do %>
+
+    <!-- vertical -->
+    <script>
+      $(document).ready(function() {
+
+        var grid = $('.grid'),
+            items = grid.find('li'),
+            itemWidth = items.width(),
+            getCols = function(){return Math.floor(grid.width() / itemWidth)},
+            initCols = getCols(),
+            elem,
+            elemBelow,
+            indexBelow,
+            pos,
+            posBelow,
+            h,
+            reCalc = function() {
+              console.log('initCols: ',initCols);
+              console.log('actual cols: ',getCols());
+              console.log('-=-=-=-=-=-=-=-');
+
+              if(initCols != getCols()) {
+                initCols = getCols();
+                vertical();
+              }
+            }
+
+        $(window).on('resize', reCalc);
+
+        window.vertical = function() {
+
+          items.each(function(index,em) {
+
+            elem = items.eq(index);
+            if(index < initCols) {elem.css('margin-top',0);}
+            indexBelow = index+initCols;
+            elemBelow = items.eq(indexBelow);
+            pos = elem.position();
+            h = elem.outerHeight(true);
+            posBelow = elemBelow.position();
+
+            console.log('initCols: ', initCols);
+            console.log('items.length: ', items.length);
+            console.log('index: ', index);
+            console.log('indexBelow: ', indexBelow);
+            console.log('elem: ', elem);
+            console.log('elemBelow: ', elemBelow);
+            console.log('h: ', h);
+            console.log('pos: ', pos);
+            console.log('posBelow: ', posBelow);
+            console.log(':: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: :: ')
+            console.log(' ');
+
+            function isReady(){
+              console.log('ready: '+ index);
+              $(em).addClass('ready');
+            };
+            setTimeout(isReady,index*100);
+
+
+            if(elemBelow.hasClass('filler')) {return;}
+            if(posBelow === undefined) {return;}
+
+            var t = elemBelow.css('top');
+            posBelow = elemBelow.position();
+
+            var q = t + posBelow.top;
+
+            elemBelow.css('margin-top', Math.round((posBelow.top - pos.top) * -1  + h) );
+            var topValue = (q - pos.top) * -1  + h ;
+
+          });
+
+        }
+
+        // delays rendering for images to size themselves.
+        // TODO: make a image ready func to do this.
+        setTimeout(vertical, 100);
+      });
+    </script>
+    <!-- /vertical -->
+<%end %>
