@@ -3,6 +3,9 @@
 source 'http://rubygems.org'
 
 gem "middleman", "~>3.3.5"
+gem 'middleman-deploy', '~> 1.0'
+gem 'rsync', '~> 1.0.9'
+gem "mini_magick"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
