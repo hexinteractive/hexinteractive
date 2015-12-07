@@ -11,7 +11,6 @@
   // width: 100%;
   width: 96%;//same as the footer. I should abstract this value...
   margin: 0 auto;
-  transition: bottom 0.6s ease-in-out;
   text-align: justify;
   font-size: 0;
   line-height: 1;
@@ -76,8 +75,7 @@
   &:focus {
     .header-nav a {
       background: none repeat scroll 0 0 rgba(248, 249, 250, 0.1);
-      box-shadow: 0 1px 1px 0 rgba(60, 60, 60, 0.3);
-      border-color: $black;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3), 0 3px 8px 0 rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -98,9 +96,13 @@
 
     &:hover,
     &:focus {
-      background: none repeat scroll 0 0 $black;
-      // box-shadow: 0 6px 4px -2px rgba(60, 60, 60, 0.3);
-      color: $white;
+      color: $true-black;
+      border-color: $black;
+    }
+
+    &:active {
+      background: none repeat scroll 0 0 rgba(248, 249, 250, 0.3);
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3), 0 3px 12px 0 rgba(0, 0, 0, 0.4);
     }
   }
 
